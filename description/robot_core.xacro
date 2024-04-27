@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  >
+
+ <xacro:include filename="inertial_macros.xacro"/>
+
+ <material name="grey">
+        <color rgba="0.7 0.7 0.7 1" />
+    </material> 
+
+      <material name="green">
+        <color rgba="0 0.6 0 1" />
+    </material> 
+
+     <material name="white">
+        <color rgba="1 1 1 1" />
+    </material> 
+
+    <link name="base_footprint" />
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <box size="0.75 0.5 0.3" />
+            </geometry>
+            <origin xyz="0.375 0.25 0.15" rpy="0 0 0" />
+        </visual>
+    </link>
+
+    <link name="lobase">
+        <visual>
+            <geometry>
+                <box size="0.6 0.3 0.15" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="white" />
+        </visual>
+    </link>
+    <link name="lidar">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.03" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="white" />
+        </visual>
+    </link>
+
+    <link name="pipe">
+        <visual>
+            <geometry>
+              <box size="0.04 0.04 .65"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="green"/>
+        </visual>
+    </link>
+
+    <link name="front_left">
+      <visual>
+         <geometry>
+             <cylinder radius="0.15" length="0.08"/>
+         </geometry>
+         <origin xyz="0 0 0" rpy="1.57 0 0"/>
+         <material name="grey"/>
+      </visual>
+    </link>
+
+    <link name="front_right">
+      <visual>
+         <geometry>
+             <cylinder radius="0.15" length="0.08"/>
+         </geometry>
+         <origin xyz="0 0 0" rpy="1.57 0 0"/>
+         <material name="grey"/>
+      </visual>
+    </link>
+
+    <link name="rear_right">
+      <visual>
+         <geometry>
+             <cylinder radius="0.15" length="0.08"/>
+         </geometry>
+         <origin xyz="0 0 0" rpy="1.57 0 0"/>
+         <material name="grey"/>
+      </visual>
+    </link>
+
+    <link name="rear_left">
+      <visual>
+         <geometry>
+             <cylinder radius="0.15" length="0.08"/>
+         </geometry>
+         <origin xyz="0 0 0" rpy="1.57 0 0"/>
+         <material name="grey"/>
+      </visual>
+    </link>
+
+    <joint name="base_joint" type="fixed">
+       <parent link="base_footprint"/>
+       <child link="base_link"/>
+       <origin xyz="-0.375 -0.25 0.327" rpy="0 0 0" />
+    </joint>
+
+    <joint name="base_front_left_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="front_left"/>
+      <origin xyz="0.18 0.06 -0.175" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="base_front_right_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="front_right"/>
+      <origin xyz="0.18 0.44 -0.175" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="base_rear_right_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="rear_right"/>
+      <origin xyz="0.57 0.44 -0.175" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="base_rear_left_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="rear_left"/>
+      <origin xyz="0.57 0.06 -0.175" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="base_lobase_joint" type="fixed">
+       <parent link="base_link"/>
+       <child link="lobase"/>
+       <origin xyz="0.375 0.25 -0.1" rpy="0 0 0"/>
+    </joint>
+    
+    <joint name="base_lidar_joint" type="fixed">
+       <parent link="base_link"/>
+       <child link="lidar"/>
+       <origin xyz="0.65 0.25 0.315" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="base_pipe_joint" type="fixed">
+       <parent link="base_link"/>
+       <child link="pipe"/>
+       <origin xyz="0.1 0.25 0.625" rpy="0 0 0" />
+    </joint>
+
+</robot>
