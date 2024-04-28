@@ -49,8 +49,7 @@
     </link>
 
     <gazebo reference="base_link">
-      <material><Gazebo/>
-      <green></green></material>
+          <material>Gazebo/green</material>
     </gazebo>
 
     <link name="lobase">
@@ -73,9 +72,9 @@
     </link>
 
     <gazebo reference="lobase">
-      <material><Gazebo/>
-      <white></white></material>
+      <material>Gazebo/white</material>
     </gazebo>
+    
     <link name="lidar">
         <visual>
             <geometry>
@@ -95,8 +94,7 @@
     </link>
 
     <gazebo reference="lidar">
-      <material><Gazebo/>
-      <blue></blue></material>
+      <material>Gazebo/blue</material>
     </gazebo>
 
     <link name="pipe">
@@ -119,8 +117,7 @@
     </link>
 
     <gazebo reference="pipe">
-      <material><Gazebo/>
-      <orange></orange></material>
+      <material>Gazebo/orange</material>
     </gazebo>
 
     <link name="front_left">
@@ -141,8 +138,7 @@
         </xacro:inertial_cylinder>
     </link>
     <gazebo reference="front_left">
-      <material><Gazebo/>
-      <black></black></material>
+      <material>Gazebo/black</material>
     </gazebo>
 
     <link name="front_right">
@@ -163,8 +159,7 @@
         </xacro:inertial_cylinder>
     </link>
     <gazebo reference="front_right">
-      <material><Gazebo/>
-      <black></black></material>
+      <material>Gazebo/black</material>
     </gazebo>
 
     <link name="rear_right">
@@ -184,9 +179,9 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
+    
     <gazebo reference="rear_right">
-      <material><Gazebo/>
-      <black></black></material>
+      <material>Gazebo/black</material>
     </gazebo>
 
     <link name="rear_left">
@@ -206,9 +201,9 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
+    
     <gazebo reference="rear_left">
-      <material><Gazebo/>
-      <black></black></material>
+      <material>Gazebo/black</material>
     </gazebo>
 
     <joint name="base_joint" type="fixed">
