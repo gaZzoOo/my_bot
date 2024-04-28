@@ -29,6 +29,8 @@
 
     <link name="base_footprint" />
 
+    </link>
+
     <link name="base_link">
         <visual>
             <geometry>
