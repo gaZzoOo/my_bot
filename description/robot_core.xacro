@@ -195,28 +195,28 @@
 
     <joint name="base_front_left_wheel_joint" type="continuous">
       <parent link="base_link"/>
-      <child link="front_left"/>
+      <child link="front_left_wheel"/>
       <origin xyz="0.18 0.06 -0.175" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
     </joint>
 
     <joint name="base_front_right_wheel_joint" type="continuous">
       <parent link="base_link"/>
-      <child link="front_right"/>
+      <child link="front_right_wheel"/>
       <origin xyz="0.18 0.44 -0.175" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
     </joint>
 
     <joint name="base_rear_right_wheel_joint" type="continuous">
       <parent link="base_link"/>
-      <child link="rear_right"/>
+      <child link="rear_right_wheel"/>
       <origin xyz="0.57 0.44 -0.175" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
     </joint>
 
     <joint name="base_rear_left_wheel_joint" type="continuous">
       <parent link="base_link"/>
-      <child link="rear_left"/>
+      <child link="rear_left_wheel"/>
       <origin xyz="0.57 0.06 -0.175" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
     </joint>
