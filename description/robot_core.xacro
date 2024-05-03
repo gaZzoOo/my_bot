@@ -49,10 +49,6 @@
         </xacro:inertial_box>
     </link>
 
-    <gazebo reference="base_link">
-          <material>Gazebo/green</material>
-    </gazebo>
-
     <link name="lobase">
         <visual>
             <geometry>
@@ -72,9 +68,6 @@
         </xacro:inertial_box>
     </link>
 
-    <gazebo reference="lobase">
-      <material>Gazebo/white</material>
-    </gazebo>
     
     <link name="lidar">
         <visual>
@@ -94,9 +87,6 @@
         </xacro:inertial_cylinder>
     </link>
 
-    <gazebo reference="lidar">
-      <material>Gazebo/blue</material>
-    </gazebo>
 
     <link name="pipe">
         <visual>
@@ -117,10 +107,6 @@
         </xacro:inertial_box>
     </link>
 
-    <gazebo reference="pipe">
-      <material>Gazebo/orange</material>
-    </gazebo>
-
     <link name="front_left">
       <visual>
          <geometry>
@@ -138,9 +124,7 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
-    <gazebo reference="front_left">
-      <material>Gazebo/black</material>
-    </gazebo>
+    
 
     <link name="front_right">
       <visual>
@@ -159,9 +143,7 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
-    <gazebo reference="front_right">
-      <material>Gazebo/black</material>
-    </gazebo>
+    
 
     <link name="rear_right">
       <visual>
@@ -181,9 +163,6 @@
         </xacro:inertial_cylinder>
     </link>
     
-    <gazebo reference="rear_right">
-      <material>Gazebo/black</material>
-    </gazebo>
 
     <link name="rear_left">
       <visual>
@@ -203,9 +182,6 @@
         </xacro:inertial_cylinder>
     </link>
     
-    <gazebo reference="rear_left">
-      <material>Gazebo/black</material>
-    </gazebo>
 
     <joint name="base_joint" type="fixed">
        <parent link="base_footprint"/>
@@ -258,5 +234,31 @@
        <child link="pipe"/>
        <origin xyz="0.1 0.25 0.625" rpy="0 0 0" />
     </joint>
+
+    <gazebo reference="lidar">
+        <material>Gazebo/Blue</material>
+    </gazebo> 
+    <gazebo reference="base_link">
+          <material>Gazebo/Green</material>
+    </gazebo> 
+    <gazebo reference="lobase">
+      <material>Gazebo/white</material>
+    </gazebo>
+    <gazebo reference="pipe">
+      <material>Gazebo/Orange</material>
+    </gazebo>
+    <gazebo reference="front_left">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="front_right">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="rear_left">
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="rear_right">
+      <material>Gazebo/Black</material>
+    </gazebo>
+
 
 </robot>
