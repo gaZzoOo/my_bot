@@ -171,7 +171,7 @@
 
     <!-- FRONT LEFT WHEEL LINK -->
 
-    <joint name="front_left_wheel_joint" type="continuous">
+    <joint name="front_left_wheel_joint" type="fixed">
         <parent link="base_link"/>
         <child link="front_left_wheel"/>
         <origin xyz="-0.2 -0.19 0" rpy="-${pi/2} 0 0" />
@@ -223,7 +223,7 @@
 
     <!-- FRONT RIGHT WHEEL LINK -->
 
-    <joint name="front_right_wheel_joint" type="continuous">
+    <joint name="front_right_wheel_joint" type="fixed">
         <parent link="base_link"/>
         <child link="front_right_wheel"/>
         <origin xyz="-0.2 0.19 0" rpy="${pi/2} 0 0" />
