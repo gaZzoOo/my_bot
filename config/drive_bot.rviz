@@ -57,6 +57,8 @@ Visualization Manager:
           Value: true
         lidar:
           Value: true
+        odom:
+          Value: true
         pipe:
           Value: true
         rear_left_wheel:
@@ -71,23 +73,24 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        base_link:
-          chassis:
-            {}
-          front_left_wheel:
-            {}
-          front_right_wheel:
-            {}
-          lidar:
-            {}
-          pipe:
-            {}
-          rear_left_wheel:
-            {}
-          rear_right_wheel:
-            {}
-          sub_chassis:
-            {}
+        odom:
+          base_link:
+            chassis:
+              {}
+            front_left_wheel:
+              {}
+            front_right_wheel:
+              {}
+            lidar:
+              {}
+            pipe:
+              {}
+            rear_left_wheel:
+              {}
+            rear_right_wheel:
+              {}
+            sub_chassis:
+              {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -160,7 +163,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: base_link
+    Fixed Frame: odom
     Frame Rate: 30
   Name: root
   Tools:
@@ -200,25 +203,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 4.086756229400635
+      Distance: 10
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.3585926592350006
-        Y: -0.5748031735420227
-        Z: 0.15288379788398743
+        X: 0
+        Y: 0
+        Z: 0
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.45039838552474976
+      Pitch: 0.785398006439209
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.608580112457275
+      Yaw: 0.785398006439209
     Saved: ~
 Window Geometry:
   Displays:
